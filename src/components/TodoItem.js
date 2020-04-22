@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class TodoItem extends Component{
     render(){
-        const {title} = this.props;
+        const {title,key, handleDelete} = this.props;
 
         return (
         <li className="list-group-item text-capitalize d-flex justify-content-between my-2">
@@ -11,7 +11,7 @@ class TodoItem extends Component{
                 <span className="mx-2 text-success">
                     <i className="fas fa-pen"></i>
                 </span>
-                <span className="mx-2 text-danger">
+                <span onClick={handleDelete} className="mx-2 text-danger">
                     <i className="fas fa-trash"></i>
                 </span>
 

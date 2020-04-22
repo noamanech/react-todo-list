@@ -42,6 +42,14 @@ class App extends Component{
             items: []
         })
     }
+
+    handleDelete = (id) =>{
+        const filteredItems = this.state.items.filter(item => item.id !== id);
+        this.setState({
+            items: filteredItems
+        })
+    }
+
     render(){
         return (
             <div className="container">
@@ -54,6 +62,7 @@ class App extends Component{
                         />
                         <TodoList items={this.state.items}
                                   clearList={this.clearList}
+                                  handleDelete={this.handleDelete}
                         />
                     </div>
                 </div>
