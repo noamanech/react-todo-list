@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class TodoItem extends Component{
     render(){
-        const {title,key, handleDelete, handleEdit} = this.props;
+        const {title, handleDelete, handleEdit} = this.props;
 
         return (
         <li className="list-group-item text-capitalize d-flex justify-content-between my-2">

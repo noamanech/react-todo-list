@@ -12,7 +12,7 @@ class TodoList extends Component{
                 {
                     items.map(item => {
                         return (
-                            <TodoItem key={item.id} title={item.title}
+                            <TodoItem key={item.id} id={item.id} title={item.title}
                                       handleDelete={() =>handleDelete(item.id)}
                                       handleEdit={()=> handleEdit(item.id)}
                             />

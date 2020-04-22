@@ -20,6 +20,8 @@ class App extends Component{
     handleSubmit = (e)=>{
     e.preventDefault();
 
+    if(this.state.item !== ""){
+
     const newItem = {
         id: this.state.id,
         title: this.state.item
@@ -35,6 +37,7 @@ class App extends Component{
         id:uuid(),
         editItem: false
     })
+    }
     }
 
     clearList = () =>{
