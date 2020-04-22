@@ -4,7 +4,7 @@ import TodoItem from "./TodoItem";
 class TodoList extends Component{
 
     render(){
-        const {items} = this.props
+        const {items, clearList} = this.props
 
         return (
             <ul className="list-group my-5">
@@ -19,7 +19,9 @@ class TodoList extends Component{
 
 
 
-                <button type="submit" className="btn btn-danger btn-block text-capitalize mt-5">
+                <button type="submit" className="btn btn-danger btn-block text-capitalize mt-5"
+                        onClick={clearList}
+                >
                     clear list
                 </button>
             </ul>
